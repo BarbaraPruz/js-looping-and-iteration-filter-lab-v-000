@@ -3,3 +3,7 @@ function findMatching (drivers, name){
   name = name.toLowerCase();
   return drivers.filter ( driver => driver.toLowerCase() === name );
 }
+
+function fuzzyMatch (drivers, str) {
+  return drivers.filter( driver => driver.startsWith(str) );
+}
